@@ -26,3 +26,10 @@ src/
   components/           各區塊（Header、Hero、功能、故事、承諾、聯絡、Footer）
   composables/useReveal.js  捲動淡入效果
 ```
+
+## 部署（GitHub Pages）
+
+`.github/workflows/deploy.yml` 會在推送到 `main`（或目前的開發分支）時自動打包並部署。
+
+第一次使用前，到 GitHub repo 的 **Settings → Pages → Build and deployment → Source** 選 **GitHub Actions**。
+部署完成後網址會是 `https://<帳號>.github.io/<repo 名稱>/`。

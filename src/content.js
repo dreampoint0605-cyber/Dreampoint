@@ -98,7 +98,7 @@ export const contact = {
   person: '黄昱啓',
   role: '晴境工作室負責人',
   // 填好之後，把下面的 [ ] 換成真實資料即可，網頁上的按鈕會自動變成可點擊的連結。
-  phone: '[你的電話]',
+  phone: '0975-665-306',
   email: '[你的 Email]',
   line: '[你的 LINE ID]',
 }

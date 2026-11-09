@@ -99,6 +99,6 @@ export const contact = {
   role: '晴境工作室負責人',
   // 填好之後，把下面的 [ ] 換成真實資料即可，網頁上的按鈕會自動變成可點擊的連結。
   phone: '0975-665-306',
-  email: '[你的 Email]',
+  email: 'dreampoint0605@gmail.com',
   line: '[你的 LINE ID]',
 }

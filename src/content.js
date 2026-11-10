@@ -10,9 +10,9 @@ export const site = {
 }
 
 export const hero = {
-  eyebrow: '彰化花壇 · AI 系統整合',
-  title: ['訂單少漏接，', '交期有人提醒。'],
-  lead: '照樣用 LINE 接單、用 Excel 報價。晴境幫你串起每天的工作，讓 AI 協助整理訂單、製作報價單、提醒交期，少一點重複抄寫，也少一點掛心。',
+  eyebrow: '彰化花壇 · 系統整合與流程改善',
+  title: ['串起工作流程，', '讓生意順一點。'],
+  lead: 'LINE 接單、Excel 報價，繼續用熟悉的工具。晴境協助串接訂單、報價與交期，減少重複抄寫，讓每天的工作更有條理。',
   primaryCta: '免費聊聊接單流程',
   secondaryCta: '看看能幫上什麼忙',
 }

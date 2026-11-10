@@ -25,6 +25,13 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          # 在 Settings → Secrets and variables → Actions → Variables 設定，沒設定就不啟用
+          VITE_CONTACT_PROVIDER: ${{ vars.VITE_CONTACT_PROVIDER }}
+          VITE_CONTACT_ENDPOINT: ${{ vars.VITE_CONTACT_ENDPOINT }}
+          VITE_LINE_OA_ID: ${{ vars.VITE_LINE_OA_ID }}
+          VITE_CHAT_ENDPOINT: ${{ vars.VITE_CHAT_ENDPOINT }}
+          VITE_CHAT_WELCOME: ${{ vars.VITE_CHAT_WELCOME }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

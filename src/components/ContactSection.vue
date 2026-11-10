@@ -1,6 +1,9 @@
 <script setup>
 import { computed } from 'vue'
 import { contact } from '../content.js'
+import { integrations } from '../config/integrations.js'
+import { lineAddFriendUrl } from '../services/line.js'
+import ContactForm from './ContactForm.vue'
 
 // 還是「[ ... ]」佔位文字時，不產生連結
 const isPlaceholder = (v) => /^\[.*\]$/.test(v.trim())
@@ -16,14 +19,21 @@ const channels = computed(() => [
     value: contact.email,
     href: isPlaceholder(contact.email) ? null : `mailto:${contact.email}`,
   },
-  {
-    label: 'LINE',
-    value: contact.line,
-    href: isPlaceholder(contact.line)
-      ? null
-      : `https://line.me/R/ti/p/${encodeURIComponent(contact.line)}`,
-  },
+  // 有設定 LINE 官方帳號時，改由下方的「加入好友」按鈕呈現
+  ...(integrations.line.enabled
+    ? []
+    : [
+        {
+          label: 'LINE',
+          value: contact.line,
+          href: isPlaceholder(contact.line)
+            ? null
+            : `https://line.me/R/ti/p/${encodeURIComponent(contact.line)}`,
+        },
+      ]),
 ])
+
+const lineUrl = lineAddFriendUrl()
 </script>
 
 <template>
@@ -47,6 +57,12 @@ const channels = computed(() => [
             <mark v-else class="todo" title="請在 src/content.js 填入">{{ c.value }}</mark>
           </li>
         </ul>
+
+        <a v-if="lineUrl" class="line-btn" :href="lineUrl" target="_blank" rel="noopener">
+          加入 LINE 官方帳號
+        </a>
+
+        <ContactForm v-if="integrations.contact.enabled" />
       </div>
     </div>
   </section>
@@ -144,6 +160,22 @@ li a {
 
 li a:hover {
   text-decoration: underline;
+}
+
+.line-btn {
+  display: block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: #06c755;
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.line-btn:hover {
+  background: #05b04b;
 }
 
 @media (max-width: 860px) {

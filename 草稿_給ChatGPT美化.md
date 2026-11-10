@@ -3,6 +3,16 @@
 > 用法：把「===== 從這裡開始複製 =====」以下的全部內容貼到 ChatGPT。
 > ChatGPT 改好後，把它回傳的 `content.js` 整份貼回 `src/content.js` 就能直接上線。
 
+## 相關連結
+
+| 項目 | 連結 |
+| --- | --- |
+| 本草稿（GitHub） | https://github.com/dreampoint0605-cyber/Dreampoint/blob/claude/awesome-ritchie-29bhkz/草稿_給ChatGPT美化.md |
+| 要貼回的文案檔 `content.js` | https://github.com/dreampoint0605-cyber/Dreampoint/blob/claude/awesome-ritchie-29bhkz/src/content.js |
+| 工作分支 | https://github.com/dreampoint0605-cyber/Dreampoint/tree/claude/awesome-ritchie-29bhkz |
+| 整個專案 | https://github.com/dreampoint0605-cyber/Dreampoint |
+| 目前的網站 | https://dreampoint0605-cyber.github.io/Dreampoint/ |
+
 ===== 從這裡開始複製 =====
 
 你是一位熟悉台灣中小企業的品牌文案與 UI/UX 顧問。請幫我美化「晴境工作室」形象官網的文案。
